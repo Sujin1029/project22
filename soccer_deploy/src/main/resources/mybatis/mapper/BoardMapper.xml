@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+                        
+<mapper namespace="com.soccer.deploy.mapper.BoardMapper">
+	<select id="list" resultType="BoardDto">
+		SELECT BOARD_ID, USER_ID, KATEGORIE_ID,TO_CHAR(REGDATE, 'YYYY-MM-DD HH24:MI:SS DAY') VIEW_NUM, BOARD_CONTENT,BOARD_TITLE
+		FROM BOARD
+		ORDER BY BOARD_ID DESC
+	</select>
+</mapper>
